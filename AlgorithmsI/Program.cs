@@ -18,7 +18,7 @@ namespace AlgorithmsI
             {
                 Console.WriteLine(node);
             }
-            Console.WriteLine(linkedList.Remove(1));
+           // Console.WriteLine(linkedList.Remove(1));
             foreach (var node in linkedList)
             {
                 Console.WriteLine(node);
@@ -26,6 +26,11 @@ namespace AlgorithmsI
             Console.WriteLine(linkedList.Remove(2));
             Console.WriteLine(linkedList.Remove(3));
             Console.WriteLine(linkedList.Count);
+            foreach (var node in linkedList)
+            {
+                Console.WriteLine(node);
+            }
+            Console.WriteLine(linkedList.Remove(1));
             foreach (var node in linkedList)
             {
                 Console.WriteLine(node);

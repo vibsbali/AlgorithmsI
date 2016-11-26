@@ -3,14 +3,10 @@ using System.Collections.Generic;
 
 namespace AlgorithmsI.LinkedLists
 {
-    /// <summary>
-    /// This is an implementation of Singly Linked List
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public class LinkedList<T> : ICollection<T>
+    public class DoublyLinkedList<T> : ICollection<T>
     {
-        private Node<T> Head { get; set; }
-        private Node<T> Tail { get; set; }
+        public DoublyLinkedNode<T> Head { get; private set; }
+        public DoublyLinkedNode<T> Tail { get; private set; }
 
         public IEnumerator<T> GetEnumerator()
         {
@@ -29,18 +25,16 @@ namespace AlgorithmsI.LinkedLists
 
         public void Add(T value)
         {
-            var node = new Node<T>(value);
+            var node = new DoublyLinkedNode<T>(value);
             if (Head == null)
             {
-                Head = node;
-                Tail = Head;
+                Head = Tail = node;
             }
             else
             {
                 Tail.Next = node;
                 Tail = node;
             }
-
             Count++;
         }
 
@@ -61,7 +55,6 @@ namespace AlgorithmsI.LinkedLists
                 }
                 node = node.Next;
             }
-
             return false;
         }
 
@@ -78,39 +71,37 @@ namespace AlgorithmsI.LinkedLists
         public bool Remove(T item)
         {
             var node = Head;
-            Node<T> previous = null;
+            DoublyLinkedNode<T>  previous = null;
             while (node != null)
             {
                 if (node.Value.Equals(item))
                 {
-                    //We have found the node to be at the head
+                    //Is it head
                     if (previous == null)
                     {
-                        if (Head == Tail)
-                        {
-                            Clear();
-                            return true;
-                        }
-                        //else
-                        Head = Head.Next;
+                        var nextNode = Head.Next;
+                        Head.Next = null;
+                        nextNode.Previous = null;
+                        Head = nextNode;
                     }
                     else
                     {
-                        //If we get to this stage it means that the previous is not null
-                        if (node == Tail)
+                        //Is it tail
+                        if (node.Next == null)
                         {
+                            Tail = null;
                             previous.Next = null;
                             Tail = previous;
                         }
                         else
                         {
                             previous.Next = node.Next;
+                            node.Next.Previous = previous;
                             node = null;
                         }
+                        Count--;
+                        return true;
                     }
-
-                    Count--;
-                    return true;
                 }
                 previous = node;
                 node = node.Next;
