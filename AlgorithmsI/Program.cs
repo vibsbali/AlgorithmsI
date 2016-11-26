@@ -7,7 +7,7 @@ namespace AlgorithmsI
     {
         static void Main(string[] args)
         {
-            var linkedList = new LinkedList<int>();
+            var linkedList = new DoublyLinkedList<int>();
 
             Console.WriteLine(linkedList.Count);
             Console.WriteLine(linkedList.Remove(1));
@@ -31,6 +31,13 @@ namespace AlgorithmsI
                 Console.WriteLine(node);
             }
             Console.WriteLine(linkedList.Remove(1));
+            foreach (var node in linkedList)
+            {
+                Console.WriteLine(node);
+            }
+
+            linkedList.AddFirst(2);
+            linkedList.AddFirst(1);
             foreach (var node in linkedList)
             {
                 Console.WriteLine(node);

@@ -96,7 +96,6 @@ namespace AlgorithmsI.LinkedLists
                     {
                         var nextNode = Head.Next;
                         Head.Next = null;
-                        nextNode.Previous = null;
                         Head = nextNode;
                     }
                     else
@@ -114,9 +113,9 @@ namespace AlgorithmsI.LinkedLists
                             node.Next.Previous = previous;
                             node = null;
                         }
-                        Count--;
-                        return true;
                     }
+                    Count--;
+                    return true;
                 }
                 previous = node;
                 node = node.Next;
