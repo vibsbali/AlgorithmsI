@@ -49,6 +49,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AlgorithmsI.LinkedLists\AlgorithmsI.LinkedLists.csproj">
+      <Project>{AFB758D9-554E-4DA9-9BA2-EE834E4C75B7}</Project>
+      <Name>AlgorithmsI.LinkedLists</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

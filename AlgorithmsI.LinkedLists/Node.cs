@@ -1,6 +1,4 @@
-﻿using System.Threading;
-
-namespace AlgorithmsI.LinkedLists
+﻿namespace AlgorithmsI.LinkedLists
 {
     public class Node<T>
     {

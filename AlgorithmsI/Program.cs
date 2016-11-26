@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AlgorithmsI.LinkedLists;
 
 namespace AlgorithmsI
 {
@@ -10,6 +7,29 @@ namespace AlgorithmsI
     {
         static void Main(string[] args)
         {
+            var linkedList = new LinkedList<int>();
+
+            Console.WriteLine(linkedList.Count);
+            Console.WriteLine(linkedList.Remove(1));
+            linkedList.Add(1);
+            linkedList.Add(2);
+            linkedList.Add(3);
+            foreach (var node in linkedList)
+            {
+                Console.WriteLine(node);
+            }
+            Console.WriteLine(linkedList.Remove(1));
+            foreach (var node in linkedList)
+            {
+                Console.WriteLine(node);
+            }
+            Console.WriteLine(linkedList.Remove(2));
+            Console.WriteLine(linkedList.Remove(3));
+            Console.WriteLine(linkedList.Count);
+            foreach (var node in linkedList)
+            {
+                Console.WriteLine(node);
+            }
         }
     }
 }
