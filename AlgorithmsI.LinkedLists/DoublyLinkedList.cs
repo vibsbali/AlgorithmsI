@@ -44,6 +44,21 @@ namespace AlgorithmsI.LinkedLists
             Count = 0;
         }
 
+        public void AddFirst(T value)
+        {
+            if (Head == null)
+            {
+                Add(value);
+                return;
+            }
+
+            var node = new DoublyLinkedNode<T>(value);
+            Head.Previous = node;
+            node.Next = Head;
+            Head = node;
+            Count++;
+        }
+
         public bool Contains(T item)
         {
             var node = Head;
