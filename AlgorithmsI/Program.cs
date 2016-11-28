@@ -1,5 +1,6 @@
 ﻿using System;
-using AlgorithmsI.LinkedLists;
+
+using AlgorithmsI.ArrayList;
 
 namespace AlgorithmsI
 {
@@ -7,41 +8,39 @@ namespace AlgorithmsI
     {
         static void Main(string[] args)
         {
-            var linkedList = new DoublyLinkedList<int>();
+            var arrayList = new ArrayList<int>(4);
 
-            Console.WriteLine(linkedList.Count);
-            Console.WriteLine(linkedList.Remove(1));
-            linkedList.Add(1);
-            linkedList.Add(2);
-            linkedList.Add(3);
-            foreach (var node in linkedList)
+            foreach (var item in arrayList)
             {
-                Console.WriteLine(node);
-            }
-           // Console.WriteLine(linkedList.Remove(1));
-            foreach (var node in linkedList)
-            {
-                Console.WriteLine(node);
-            }
-            Console.WriteLine(linkedList.Remove(2));
-            Console.WriteLine(linkedList.Remove(3));
-            Console.WriteLine(linkedList.Count);
-            foreach (var node in linkedList)
-            {
-                Console.WriteLine(node);
-            }
-            Console.WriteLine(linkedList.Remove(1));
-            foreach (var node in linkedList)
-            {
-                Console.WriteLine(node);
+                Console.WriteLine(item);
             }
 
-            linkedList.AddFirst(2);
-            linkedList.AddFirst(1);
-            foreach (var node in linkedList)
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine(node);
+                arrayList.Add(i);
             }
+
+            Console.WriteLine(arrayList.Count);
+            foreach (var item in arrayList)
+            {
+                Console.WriteLine(item);
+            }
+
+            arrayList.RemoveAt(5);
+            Console.WriteLine(arrayList.Count);
+            foreach (var item in arrayList)
+            {
+                Console.WriteLine(item);
+            }
+
+            arrayList.Insert(5, 5);
+            Console.WriteLine(arrayList.Count);
+            foreach (var item in arrayList)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine(arrayList[4]);
         }
     }
 }
