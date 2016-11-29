@@ -1,6 +1,6 @@
 ﻿using System;
+using AlgorithmsI.StacksAndQueues;
 
-using AlgorithmsI.ArrayList;
 
 namespace AlgorithmsI
 {
@@ -8,39 +8,43 @@ namespace AlgorithmsI
     {
         static void Main(string[] args)
         {
-            var arrayList = new ArrayList<int>(4);
+            var queue = new DequeWithArray<int>();
 
-            foreach (var item in arrayList)
+            Console.WriteLine("Inserting 0 to 3");
+            for (int i = 0; i < 4; i++)
             {
-                Console.WriteLine(item);
+                queue.EnqueueLast(i);
             }
 
-            for (int i = 0; i < 10; i++)
+            Console.WriteLine("Printing 0 to 1");
+            for (int i = 0; i < 2; i++)
             {
-                arrayList.Add(i);
+                Console.WriteLine(queue.Dequeue());
             }
 
-            Console.WriteLine(arrayList.Count);
-            foreach (var item in arrayList)
+            Console.WriteLine("Inserting 4 to 7");
+            for (int i = 4; i < 8; i++)
             {
-                Console.WriteLine(item);
+                queue.EnqueueLast(i);
             }
 
-            arrayList.RemoveAt(5);
-            Console.WriteLine(arrayList.Count);
-            foreach (var item in arrayList)
+            Console.WriteLine("Printing complete queue");
+            var currentCount = queue.Count;
+            for (int i = 0; i < currentCount; i++)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(queue.Dequeue());
             }
 
-            arrayList.Insert(5, 5);
-            Console.WriteLine(arrayList.Count);
-            foreach (var item in arrayList)
+            Console.WriteLine("Inserting 0 to 16");
+            for (int i = 0; i < 16; i++)
             {
-                Console.WriteLine(item);
+                queue.EnqueueLast(i);
             }
 
-            Console.WriteLine(arrayList[4]);
+
+            Console.WriteLine($"Current count is {queue.Count}");
+
+            
         }
     }
 }
