@@ -10,18 +10,16 @@ namespace AlgorithmsI
         {
             var bst = new BinaryTree<int>();
 
-           bst.Add(4);
-            bst.Add(2);
-            bst.Add(5);
-            bst.Add(1);
-            bst.Add(3);
-            bst.Add(7);
-            bst.Add(6);
             bst.Add(8);
+            bst.Add(5);
+            bst.Add(10);
+            bst.Add(2);
+            bst.Add(6);
+            bst.Add(7);
 
+            bst.Remove(5);
 
-
-            bst.PrintPreOrderTraversal();
+            bst.PrintInOrderTraversal();
 
             Console.WriteLine($"Number of nodes = {bst.Count}");
 
