@@ -54,6 +54,10 @@
       <Project>{893526c2-bb5e-4dde-ada5-535b51660c49}</Project>
       <Name>AlgorithmsI.ArrayList</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AlgorithmsI.BinarySearchTree\AlgorithmsI.BinarySearchTree.csproj">
+      <Project>{37de12f9-2c8c-4265-84e1-4aee7165d1ca}</Project>
+      <Name>AlgorithmsI.BinarySearchTree</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AlgorithmsI.LinkedLists\AlgorithmsI.LinkedLists.csproj">
       <Project>{AFB758D9-554E-4DA9-9BA2-EE834E4C75B7}</Project>
       <Name>AlgorithmsI.LinkedLists</Name>

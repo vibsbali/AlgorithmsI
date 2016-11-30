@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Threading;
 
 namespace AlgorithmsI.BinarySearchTree
@@ -45,6 +46,54 @@ namespace AlgorithmsI.BinarySearchTree
                 {
                     AddRecursively(parent.LeftNode, value);
                 }
+            }
+        }
+
+        //LRP
+        public void PrintPostOrderTraversal()
+        {
+            PostOrderTraversal(root);
+        }
+
+        private void PostOrderTraversal(BinaryTreeNode<T> binaryTreeNode)
+        {
+            if (binaryTreeNode != null)
+            {
+                PostOrderTraversal(binaryTreeNode.LeftNode);
+                PostOrderTraversal(binaryTreeNode.RightNode);
+                Console.WriteLine(binaryTreeNode.Value);
+            }
+        }
+
+        //LPR
+        public void PrintInOrderTraversal()
+        {
+            InOrderTraversal(root);
+        }
+
+        private void InOrderTraversal(BinaryTreeNode<T> binaryTreeNode)
+        {
+            if (binaryTreeNode != null)
+            {
+                InOrderTraversal(binaryTreeNode.LeftNode);
+                Console.WriteLine(binaryTreeNode.Value);
+                InOrderTraversal(binaryTreeNode.RightNode);
+            }
+        }
+
+        //PLR
+        public void PrintPreOrderTraversal()
+        {
+            PreOrderTraversal(root);
+        }
+
+        private void PreOrderTraversal(BinaryTreeNode<T> binaryTreeNode)
+        {
+            if (binaryTreeNode != null)
+            {
+                Console.WriteLine(binaryTreeNode.Value);
+                PreOrderTraversal(binaryTreeNode.LeftNode);
+                PreOrderTraversal(binaryTreeNode.RightNode);
             }
         }
 
