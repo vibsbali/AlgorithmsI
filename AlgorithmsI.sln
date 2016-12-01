@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsI.ArrayList", "Al
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsI.StacksAndQueues", "AlgorithmsI.StacksAndQueues\AlgorithmsI.StacksAndQueues.csproj", "{7652E88A-D744-490A-A92A-8C1C5EF31C7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsI.Sets", "AlgorithmsI.Sets\AlgorithmsI.Sets.csproj", "{27AD74D8-1C3F-46A3-A4C2-732EC20E1CE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7652E88A-D744-490A-A92A-8C1C5EF31C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7652E88A-D744-490A-A92A-8C1C5EF31C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7652E88A-D744-490A-A92A-8C1C5EF31C7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27AD74D8-1C3F-46A3-A4C2-732EC20E1CE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27AD74D8-1C3F-46A3-A4C2-732EC20E1CE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27AD74D8-1C3F-46A3-A4C2-732EC20E1CE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27AD74D8-1C3F-46A3-A4C2-732EC20E1CE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

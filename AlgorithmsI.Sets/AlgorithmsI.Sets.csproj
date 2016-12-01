@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{03DDA848-C1E7-47EA-9108-FAC38E182D67}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{27AD74D8-1C3F-46A3-A4C2-732EC20E1CE1}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AlgorithmsI</RootNamespace>
-    <AssemblyName>AlgorithmsI</AssemblyName>
+    <RootNamespace>AlgorithmsI.Sets</RootNamespace>
+    <AssemblyName>AlgorithmsI.Sets</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,29 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Set.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AlgorithmsI.ArrayList\AlgorithmsI.ArrayList.csproj">
-      <Project>{893526c2-bb5e-4dde-ada5-535b51660c49}</Project>
-      <Name>AlgorithmsI.ArrayList</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AlgorithmsI.LinkedLists\AlgorithmsI.LinkedLists.csproj">
-      <Project>{AFB758D9-554E-4DA9-9BA2-EE834E4C75B7}</Project>
-      <Name>AlgorithmsI.LinkedLists</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AlgorithmsI.Sets\AlgorithmsI.Sets.csproj">
-      <Project>{27ad74d8-1c3f-46a3-a4c2-732ec20e1ce1}</Project>
-      <Name>AlgorithmsI.Sets</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AlgorithmsI.StacksAndQueues\AlgorithmsI.StacksAndQueues.csproj">
-      <Project>{7652e88a-d744-490a-a92a-8c1c5ef31c7d}</Project>
-      <Name>AlgorithmsI.StacksAndQueues</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
