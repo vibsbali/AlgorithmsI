@@ -1,5 +1,6 @@
 ﻿using System;
 using AlgorithmsI.BinarySearchTree;
+using AlgorithmsI.Sorting;
 
 
 namespace AlgorithmsI
@@ -8,21 +9,14 @@ namespace AlgorithmsI
     {
         static void Main(string[] args)
         {
-            var bst = new BinaryTree<int>();
+            var items = new[] {1, 3, 4, 54, 2, 12, 32, 231, 534, 121, 23, 54, 12, 53};
 
-            bst.Add(8);
-            bst.Add(5);
-            bst.Add(10);
-            bst.Add(2);
-            bst.Add(6);
-            bst.Add(7);
+            SelectionSort.Sort(items);
 
-            bst.Remove(5);
-
-            bst.PrintInOrderTraversal();
-
-            Console.WriteLine($"Number of nodes = {bst.Count}");
-
+            foreach (var item in items)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
