@@ -9,8 +9,10 @@ namespace AlgorithmsI.Sorting
             BreakIntoTwoHalves(items);
         }
 
+        //This method breaks the original array into smaller pieces.
         private static void BreakIntoTwoHalves<T>(T[] items) where T : IComparable<T>
         {
+            //This is the base case that causes recursion to end
             if (items.Length <= 1)
             {
                 return;
@@ -27,6 +29,7 @@ namespace AlgorithmsI.Sorting
             BreakIntoTwoHalves(left);
             BreakIntoTwoHalves(right);
 
+            //The reference to items array doesn't change! No where we say items = new Items
             SortAndMergeTwoArrays(items, left, right);
         }
 
