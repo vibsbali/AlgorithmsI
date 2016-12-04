@@ -1,5 +1,4 @@
 ﻿using System;
-using AlgorithmsI.BinarySearchTree;
 using AlgorithmsI.Sorting;
 
 
@@ -11,7 +10,7 @@ namespace AlgorithmsI
         {
             var items = new[] {1, 3, 4, 54, 2, 12, 32, 231, 534, 121, 23, 54, 12, 53};
 
-            SelectionSort.Sort(items);
+            MergeSort.Sort(items);
 
             foreach (var item in items)
             {
