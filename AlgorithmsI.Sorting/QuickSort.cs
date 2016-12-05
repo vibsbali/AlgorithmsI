@@ -1,43 +1,52 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AlgorithmsI.Sorting
 {
     public class QuickSort<T> where T : IComparable<T>
     {
-        public static void Sort(T[] items) 
+        public static void Sort(T[] items)
         {
-            Shuffle(ref items);
-            Partion(items, 0, 1, items.Length - 1);
+            //Shuffle(ref items);
+            PartionAndSort(items, 0, items.Length - 1);
         }
 
-        private static void Partion(T[] items, int lo, int i, int j)
+        private static void PartionAndSort(T[] items, int pivot, int hi)
         {
-            if (i >= j)
+            //base case
+            if (pivot >= hi)
             {
                 return;
             }
 
-            while (i < j)
+            var i = pivot + 1;
+            var j = hi;
+            while (true)
             {
-                while (items[lo].CompareTo(items[i]) >= 0 && i <= j)
+                while (items[i].CompareTo(items[pivot]) <= 0 && i < j)
                 {
                     i++;
                 }
 
-                while (items[lo].CompareTo(items[j]) < 0 && j >= i)
+                while (items[j].CompareTo(items[pivot]) > 0 && j >= i - 1)
                 {
                     j--;
                 }
 
-                Exchange(items, i, j);
+                //We only exchange if the pointers has not crossed over
+                if (j > i)
+                {
+                    Exchange(items, i, j);
+                }
+                else
+                {
+                    break;
+                }
             }
 
-            Exchange(items, lo, j);
-
+            Exchange(items, pivot, j);
+            PartionAndSort(items, pivot, j - 1);
+            PartionAndSort(items, j + 1, hi);
         }
 
         private static void Exchange(T[] items, int i, int j)

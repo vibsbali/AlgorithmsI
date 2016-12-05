@@ -8,9 +8,9 @@ namespace AlgorithmsI
     {
         static void Main(string[] args)
         {
-            var items = new[] {1, 3, 4, 54, 53};
+            var items = new[] {'z', 'k', 'a', 'c', 'd', 'f', 'k', 'z'};
 
-            QuickSort<int>.Sort(items);
+            QuickSort<char>.Sort(items);
 
             foreach (var item in items)
             {
