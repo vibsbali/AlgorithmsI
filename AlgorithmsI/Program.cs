@@ -1,4 +1,5 @@
 ﻿using System;
+using AlgorithmI.MaxPriorityQueue;
 using AlgorithmsI.BinarySearchTree;
 using AlgorithmsI.Sorting;
 
@@ -11,11 +12,16 @@ namespace AlgorithmsI
         {
             var items = new[] {1, 3, 4, 54, 2, 12, 32, 231, 534, 121, 23, 54, 12, 53};
 
-            SelectionSort.Sort(items);
+            var mpq = new MaxPriorityQ<int>(10);
 
-            foreach (var item in items)
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine(item);
+                mpq.Add(items[i]);
+            }
+
+            while (mpq.Count > 0)
+            {
+                Console.WriteLine(mpq.RemoveMax());
             }
         }
     }

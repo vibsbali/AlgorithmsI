@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsI.BinarySearchTre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsI.Sorting", "AlgorithmsI.Sorting\AlgorithmsI.Sorting.csproj", "{DC98D443-EB44-4780-9A5F-03F23D62CDCE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmI.MaxPriorityQueue", "AlgorithmI.MaxPriorityQueue\AlgorithmI.MaxPriorityQueue.csproj", "{D2FF6A5B-1EBA-4910-B317-2C4B9CBA4252}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{DC98D443-EB44-4780-9A5F-03F23D62CDCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC98D443-EB44-4780-9A5F-03F23D62CDCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC98D443-EB44-4780-9A5F-03F23D62CDCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2FF6A5B-1EBA-4910-B317-2C4B9CBA4252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2FF6A5B-1EBA-4910-B317-2C4B9CBA4252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2FF6A5B-1EBA-4910-B317-2C4B9CBA4252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2FF6A5B-1EBA-4910-B317-2C4B9CBA4252}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
